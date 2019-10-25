@@ -1,9 +1,9 @@
 #ifndef LCD_H_
 #define LCD_H_
 
-#define LCDDATAPORT        PORTD  // Порт и пины,
-#define LCDDATADDR         DDRD   // к которым подключены
-#define LCDDATAPIN         PIND   // сигналы D4-D7.
+#define LCDDATAPORT        PORTC  // Порт и пины,
+#define LCDDATADDR         DDRC   // к которым подключены
+#define LCDDATAPIN         PINC   // сигналы D4-D7.
 #define LCD_D4             4
 #define LCD_D5             5
 #define LCD_D6             6
