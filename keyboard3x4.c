@@ -1,6 +1,6 @@
 #include "KEYBOARD3X4.h"
 
-int numKey[3][4]=	{{1, 2, 3},
+int numKey[4][3]=	{{1, 2, 3},
 					{4, 5, 6},
 					{7, 8, 9},
 					{10, 0, 11}};
@@ -10,6 +10,7 @@ char inputState[3]={0x01,0x02,0x04};
 
 int readIntFromKeyboard()
 {
+	PORT_OF_KEYBOARD_STATE = 0x00;
 	 for(int i=0; i<KEYBOARD_SIZE_Y; i++)
 	 {
 		 PORT_OF_KEYBOARD_STATE = portState[i];
@@ -22,7 +23,7 @@ int readIntFromKeyboard()
 			 }
 		 }
 	}
-	return DEFAULT_RETURN;
+	return DEFAULT_RETURN_KEYBOARD;
 }
 
 void initKeyabord()
